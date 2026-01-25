@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="Profile"
+            android:textColor="#1F2937"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Profile Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_logo_circle"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginBottom="30dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_graduation"
+                android:background="#F3F4F6"
+                android:padding="10dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ronald Richards"
+                    android:textColor="#1F2937"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvUserEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="ronaldrichards@gmail.com"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Menu List -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Manage Profile -->
+            <LinearLayout
+                style="@style/ProfileMenuItemStyle"
+                android:id="@+id/menuManageProfile">
+                <ImageView
+                    style="@style/ProfileMenuIconStyle"
+                    android:src="@android:drawable/ic_menu_myplaces" />
+                <TextView
+                    style="@style/ProfileMenuTextStyle"
+                    android:text="Manage Profile" />
+                <ImageView
+                    style="@style/ProfileMenuArrowStyle" />
+            </LinearLayout>
+
+            <!-- Password & Security -->
+            <LinearLayout
+                style="@style/ProfileMenuItemStyle"
+                android:id="@+id/menuPassword">
+                <ImageView
+                    style="@style/ProfileMenuIconStyle"
+                    android:src="@android:drawable/ic_lock_idle_lock" />
+                <TextView
+                    style="@style/ProfileMenuTextStyle"
+                    android:text="Password &amp; Security" />
+                <ImageView
+                    style="@style/ProfileMenuArrowStyle" />
+            </LinearLayout>
+
+            <!-- Notifications -->
+            <LinearLayout
+                style="@style/ProfileMenuItemStyle"
+                android:id="@+id/menuNotifications">
+                <ImageView
+                    style="@style/ProfileMenuIconStyle"
+                    android:src="@android:drawable/ic_popup_reminder" />
+                <TextView
+                    style="@style/ProfileMenuTextStyle"
+                    android:text="Notifications" />
+                <ImageView
+                    style="@style/ProfileMenuArrowStyle" />
+            </LinearLayout>
+
+            <!-- Language -->
+            <LinearLayout
+                style="@style/ProfileMenuItemStyle"
+                android:id="@+id/menuLanguage">
+                <ImageView
+                    style="@style/ProfileMenuIconStyle"
+                    android:src="@android:drawable/ic_menu_search" />
+                <TextView
+                    style="@style/ProfileMenuTextStyle"
+                    android:text="Language" />
+                <ImageView
+                    style="@style/ProfileMenuArrowStyle" />
+            </LinearLayout>
+
+            <!-- About Us -->
+            <LinearLayout
+                style="@style/ProfileMenuItemStyle"
+                android:id="@+id/menuAboutUs">
+                <ImageView
+                    style="@style/ProfileMenuIconStyle"
+                    android:src="@android:drawable/ic_menu_info_details" />
+                <TextView
+                    style="@style/ProfileMenuTextStyle"
+                    android:text="About Us" />
+                <ImageView
+                    style="@style/ProfileMenuArrowStyle" />
+            </LinearLayout>
+
+            <!-- Theme -->
+            <LinearLayout
+                style="@style/ProfileMenuItemStyle"
+                android:id="@+id/menuTheme">
+                <ImageView
+                    style="@style/ProfileMenuIconStyle"
+                    android:src="@android:drawable/ic_menu_gallery" />
+                <TextView
+                    style="@style/ProfileMenuTextStyle"
+                    android:text="Theme" />
+                <ImageView
+                    style="@style/ProfileMenuArrowStyle" />
+            </LinearLayout>
+
+            <!-- Appointments -->
+            <LinearLayout
+                style="@style/ProfileMenuItemStyle"
+                android:id="@+id/menuAppointments">
+                <ImageView
+                    style="@style/ProfileMenuIconStyle"
+                    android:src="@android:drawable/ic_menu_today" />
+                <TextView
+                    style="@style/ProfileMenuTextStyle"
+                    android:text="Appointments" />
+                <ImageView
+                    style="@style/ProfileMenuArrowStyle" />
+            </LinearLayout>
+
+            <!-- Help Center -->
+            <LinearLayout
+                style="@style/ProfileMenuItemStyle"
+                android:id="@+id/menuHelp">
+                <ImageView
+                    style="@style/ProfileMenuIconStyle"
+                    android:src="@android:drawable/ic_menu_help" />
+                <TextView
+                    style="@style/ProfileMenuTextStyle"
+                    android:text="Help Center" />
+                <ImageView
+                    style="@style/ProfileMenuArrowStyle" />
+            </LinearLayout>
+
+            <!-- Contact Us -->
+            <LinearLayout
+                style="@style/ProfileMenuItemStyle"
+                android:id="@+id/menuContact">
+                <ImageView
+                    style="@style/ProfileMenuIconStyle"
+                    android:src="@android:drawable/ic_menu_call" />
+                <TextView
+                    style="@style/ProfileMenuTextStyle"
+                    android:text="Contact Us" />
+                <ImageView
+                    style="@style/ProfileMenuArrowStyle" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
