@@ -14,8 +14,8 @@
     <style name="ProfileMenuIconStyle">
         <item name="android:layout_width">24dp</item>
         <item name="android:layout_height">24dp</item>
-        <item name="android:layout_marginEnd=">20dp</item>
-        <item name="app:tint">#1F2937</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:tint">#1F2937</item>
     </style>
 
     <style name="ProfileMenuTextStyle">
@@ -30,6 +30,6 @@
         <item name="android:layout_width">16dp</item>
         <item name="android:layout_height">16dp</item>
         <item name="android:src">@android:drawable/ic_media_play</item>
-        <item name="app:tint">#9CA3AF</item>
+        <item name="android:tint">#9CA3AF</item>
     </style>
 </resources>
