@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#673AB7">
@@ -13,12 +14,13 @@
         android:orientation="horizontal"
         android:padding="20dp"
         android:gravity="center_vertical"
-        app:layout_top_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@drawable/ic_graduation"
+            android:contentDescription="App Logo"
             app:tint="#10B981" />
 
         <TextView
@@ -35,6 +37,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@android:drawable/ic_menu_more"
+            android:contentDescription="More Options"
             app:tint="#FFFFFF" />
     </LinearLayout>
 
@@ -91,6 +94,7 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@android:drawable/ic_popup_reminder"
+                        android:contentDescription="Notifications"
                         app:tint="#FFFFFF" />
 
                     <TextView
@@ -135,6 +139,7 @@
                         android:layout_height="20dp"
                         android:layout_alignParentEnd="true"
                         android:src="@android:drawable/ic_popup_reminder"
+                        android:contentDescription="Assignment Reminders"
                         app:tint="#10B981" />
                 </RelativeLayout>
 
@@ -242,6 +247,7 @@
                         android:layout_height="20dp"
                         android:layout_alignParentEnd="true"
                         android:src="@android:drawable/ic_menu_manage"
+                        android:contentDescription="Manage Materials"
                         app:tint="#CBD5E1" />
                 </RelativeLayout>
 
@@ -303,9 +309,21 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_today" app:tint="#10B981" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textSize="11sp" android:textColor="#10B981" />
+            android:orientation="vertical"
+            android:focusable="true"
+            android:clickable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_today"
+                android:contentDescription="Home"
+                app:tint="#10B981" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:textColor="#10B981" />
         </LinearLayout>
 
         <LinearLayout
@@ -313,9 +331,21 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_graduation" app:tint="#94A3B8" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Courses" android:textSize="11sp" android:textColor="#94A3B8" />
+            android:orientation="vertical"
+            android:focusable="true"
+            android:clickable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_graduation"
+                android:contentDescription="Courses"
+                app:tint="#94A3B8" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Courses"
+                android:textSize="12sp"
+                android:textColor="#94A3B8" />
         </LinearLayout>
 
         <FrameLayout
@@ -334,6 +364,7 @@
                 android:layout_height="28dp"
                 android:layout_gravity="center"
                 android:src="@android:drawable/ic_input_add"
+                android:contentDescription="Add Action"
                 app:tint="#FFFFFF" />
         </FrameLayout>
 
@@ -342,9 +373,21 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_sort_by_size" app:tint="#94A3B8" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stats" android:textSize="11sp" android:textColor="#94A3B8" />
+            android:orientation="vertical"
+            android:focusable="true"
+            android:clickable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:contentDescription="Statistics"
+                app:tint="#94A3B8" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stats"
+                android:textSize="12sp"
+                android:textColor="#94A3B8" />
         </LinearLayout>
 
         <LinearLayout
@@ -352,9 +395,21 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="#94A3B8" />
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textSize="11sp" android:textColor="#94A3B8" />
+            android:orientation="vertical"
+            android:focusable="true"
+            android:clickable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:contentDescription="Profile"
+                app:tint="#94A3B8" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="12sp"
+                android:textColor="#94A3B8" />
         </LinearLayout>
 
     </LinearLayout>

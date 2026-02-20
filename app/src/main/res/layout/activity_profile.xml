@@ -12,17 +12,33 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Title -->
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:text="Profile"
-            android:textColor="#1F2937"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#1F2937" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Profile"
+                android:textColor="#1F2937"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <!-- Profile Card -->
         <LinearLayout
@@ -148,62 +164,34 @@
                     style="@style/ProfileMenuArrowStyle" />
             </LinearLayout>
 
-            <!-- Theme -->
+            <!-- Logout (Using tvLogout as ID for click listener) -->
             <LinearLayout
                 style="@style/ProfileMenuItemStyle"
-                android:id="@+id/menuTheme">
+                android:id="@+id/menuLogout">
                 <ImageView
                     style="@style/ProfileMenuIconStyle"
-                    android:src="@android:drawable/ic_menu_gallery" />
+                    android:src="@android:drawable/ic_lock_power_off" />
                 <TextView
+                    android:id="@+id/tvLogout"
                     style="@style/ProfileMenuTextStyle"
-                    android:text="Theme" />
-                <ImageView
-                    style="@style/ProfileMenuArrowStyle" />
-            </LinearLayout>
-
-            <!-- Appointments -->
-            <LinearLayout
-                style="@style/ProfileMenuItemStyle"
-                android:id="@+id/menuAppointments">
-                <ImageView
-                    style="@style/ProfileMenuIconStyle"
-                    android:src="@android:drawable/ic_menu_today" />
-                <TextView
-                    style="@style/ProfileMenuTextStyle"
-                    android:text="Appointments" />
-                <ImageView
-                    style="@style/ProfileMenuArrowStyle" />
-            </LinearLayout>
-
-            <!-- Help Center -->
-            <LinearLayout
-                style="@style/ProfileMenuItemStyle"
-                android:id="@+id/menuHelp">
-                <ImageView
-                    style="@style/ProfileMenuIconStyle"
-                    android:src="@android:drawable/ic_menu_help" />
-                <TextView
-                    style="@style/ProfileMenuTextStyle"
-                    android:text="Help Center" />
-                <ImageView
-                    style="@style/ProfileMenuArrowStyle" />
-            </LinearLayout>
-
-            <!-- Contact Us -->
-            <LinearLayout
-                style="@style/ProfileMenuItemStyle"
-                android:id="@+id/menuContact">
-                <ImageView
-                    style="@style/ProfileMenuIconStyle"
-                    android:src="@android:drawable/ic_menu_call" />
-                <TextView
-                    style="@style/ProfileMenuTextStyle"
-                    android:text="Contact Us" />
+                    android:text="Logout" />
                 <ImageView
                     style="@style/ProfileMenuArrowStyle" />
             </LinearLayout>
 
         </LinearLayout>
+
+        <!-- Save Changes Button -->
+        <Button
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="30dp"
+            android:text="Save Changes"
+            android:textAllCaps="false"
+            android:backgroundTint="#4F46E5"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
     </LinearLayout>
 </ScrollView>

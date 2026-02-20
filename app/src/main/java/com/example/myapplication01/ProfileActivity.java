@@ -1,7 +1,6 @@
 package com.example.myapplication01;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,26 +18,15 @@ public class ProfileActivity extends AppCompatActivity {
         Button btnSaveChanges = findViewById(R.id.btnSaveChanges);
         TextView tvLogout = findViewById(R.id.tvLogout);
 
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        ivBack.setOnClickListener(v -> finish());
 
-        btnSaveChanges.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(ProfileActivity.this, "Changes Saved", Toast.LENGTH_SHORT).show();
-            }
-        });
+        btnSaveChanges.setOnClickListener(v -> 
+            Toast.makeText(ProfileActivity.this, "Changes Saved", Toast.LENGTH_SHORT).show()
+        );
 
-        tvLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(ProfileActivity.this, "Logged Out", Toast.LENGTH_SHORT).show();
-                // Add logout logic here (e.g., clear session and go to login)
-            }
+        tvLogout.setOnClickListener(v -> {
+            Toast.makeText(ProfileActivity.this, "Logged Out", Toast.LENGTH_SHORT).show();
+            // Add logout logic here (e.g., clear session and go to login)
         });
     }
 }
